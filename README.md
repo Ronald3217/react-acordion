@@ -2,6 +2,8 @@
 ## Frequently Asked Questions Component for React
 ![](./Acordion_White.png)
 
+### More Screenshots below the instructions.
+
 ### How To Install?
 ```bash
 npm i react-faq-acordion
