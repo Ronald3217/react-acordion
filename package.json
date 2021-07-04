@@ -1,6 +1,6 @@
 {
     "name": "react-faq-acordion",
-    "version": "0.1.0250",
+    "version": "0.1.0251",
     "description": "Frequently Asked Questions Component for React",
     "main": "dist/index.js",
     "module": "dist/index.js",
