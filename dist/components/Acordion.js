@@ -23,17 +23,11 @@ const Ul = _styled.default.ul(_templateObject || (_templateObject = _taggedTempl
 
 const Li = _styled.default.li(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  border-bottom: ", ";\n  padding-bottom: 10px;\n\n  &:last-of-type {\n    border-bottom: none;\n    padding-bottom: 0;\n  }\n"])), props => props.theme.borderBottom);
 
-const Acordion = _ref => {
+const Accordion = _ref => {
   let {
     data,
     theme
   } = _ref;
-  const lightTheme = {
-    background: '#EBF4F8',
-    color: '#2C2738',
-    text: '#2C2738',
-    accent: '#0880AE'
-  };
   return /*#__PURE__*/_react.default.createElement(Ul, null, data.map((data, key) => {
     return /*#__PURE__*/_react.default.createElement(Li, {
       key: data.title
@@ -44,5 +38,5 @@ const Acordion = _ref => {
   }));
 };
 
-var _default = Acordion;
+var _default = Accordion;
 exports.default = _default;

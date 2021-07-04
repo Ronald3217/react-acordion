@@ -35,7 +35,7 @@ const Content = _styled.default.div(_templateObject5 || (_templateObject5 = _tag
 
 const Paragraph = _styled.default.p(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  margin: 0;\n  padding-top: 10px;\n  font-size: 24px;\n  font-weight: 300;\n  line-height: 1.3;\n  color: ", ";\n  text-align: center;\n"])), props => props.theme.color);
 
-const AcordionItem = _ref => {
+const AccordionItem = _ref => {
   let {
     data,
     theme
@@ -78,5 +78,5 @@ const AcordionItem = _ref => {
   }, paragraph))));
 };
 
-var _default = AcordionItem;
+var _default = AccordionItem;
 exports.default = _default;

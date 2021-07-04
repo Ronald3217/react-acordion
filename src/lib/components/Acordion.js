@@ -25,14 +25,7 @@ const Li = styled.li`
   }
 `;
 
-const Acordion = ({ data, theme }) => {
-
-	const lightTheme = {
-		background: '#EBF4F8',
-		color: '#2C2738',
-		text: '#2C2738',
-		accent: '#0880AE',
-	}
+const Accordion = ({ data, theme }) => {
 	return (
 		<Ul>
 			{data.map((data, key) => {
@@ -46,4 +39,4 @@ const Acordion = ({ data, theme }) => {
 	);
 };
 
-export default Acordion;
+export default Accordion;

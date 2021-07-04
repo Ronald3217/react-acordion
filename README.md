@@ -18,12 +18,12 @@ const data = [
 ```
 ### How To Use?
 ```bash
-import { Acordion } from 'react-faq-acordion';
+import { Accordion } from 'react-faq-acordion';
 
 const someComponent = ()=>(
-    <Acordion 
+    <Accordion 
         data={data} 
-        theme='Dark' 
+        theme='dark' 
     />
 )
 ```
@@ -35,7 +35,8 @@ To set a max-width wrap it in a div tag or similar with a custom max-width to yo
 |  Prop |  Type  | Is Required? | Options                |
 |:-----:|:------:|:------------:|------------------------|
 |  data |  Array |   Required   | Array with objects     |
-| theme | String |   Optional   | dark,green,blue,purple |
+| theme | String |   Optional   | dark,green,netflix,blue,purple |
+netflix has a netflix faq style
 #### data=[Array] :  Type = Array, Scheme in the first comments.
 ### theme='String' Type = String, The default theme is White. Available: dark, blue, green, purple and white (Default).
 

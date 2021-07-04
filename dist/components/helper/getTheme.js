@@ -31,6 +31,14 @@ const getTheme = theme => {
         borderBottom: ".5px solid #ccc"
       };
 
+    case 'netflix':
+      return {
+        background: '#303030',
+        backgroundHeader: '#303030',
+        color: "#fff",
+        borderBottom: ".5px solid #000"
+      };
+
     case 'purple':
       return {
         background: "rgb(158, 134, 255)",

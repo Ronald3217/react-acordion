@@ -68,7 +68,7 @@ const Paragraph = styled.p`
   text-align: center;
 `;
 
-const AcordionItem = ({ data, theme }) => {
+const AccordionItem = ({ data, theme }) => {
   const [opened, setOpened] = useState(false);
   const { title, paragraph } = data;
 
@@ -105,4 +105,4 @@ const AcordionItem = ({ data, theme }) => {
   );
 };
 
-export default AcordionItem;
+export default AccordionItem;

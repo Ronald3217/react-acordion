@@ -1,5 +1,5 @@
-import Acordion from './components/Acordion';
+import Accordion from './components/Acordion';
 
 export {
-	Acordion
+	Accordion
 };
