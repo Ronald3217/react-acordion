@@ -1,5 +1,5 @@
 {
-    "name": "react-faq-acordion",
+    "name": "react-acordion",
     "version": "0.1.0247",
     "description": "Frequently Asked Questions Component for React",
     "main": "./build/index.js",
