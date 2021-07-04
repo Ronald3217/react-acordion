@@ -1,49 +1,36 @@
-const path = require('path');
-
+var path = require('path');
 module.exports = {
+  entry: './src/index.js',
   mode: 'production',
-  entry: './src/Acordion.js',
   output: {
-    path: path.resolve('lib'),
-    filename: 'Acordion.js',
-    libraryTarget: 'commonjs2',
+    path: path.resolve(__dirname, 'build'),
+    filename: 'index.js',
+    // LA LINEA DE AQUI ABAJO ES LA MAS IMPORTANTE!
+    // :mindblow: Perdí mas de 2 dias hasta darme cuenta que esta es la linea mas importante de toda esta guia.
+    libraryTarget: 'commonjs2'
   },
   module: {
     rules: [
-      {
-        test: /\.js?$/,
-        exclude: /(node_modules)/,
-        use: 'babel-loader',
+       {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
+        test: /\.js$/,
+        include: path.resolve(__dirname, 'src'),
+        exclude: /(node_modules|bower_components|build)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env']
+          }
+        }
       }
-    ],
-  },
-  resolve: {
-    alias: {
-      'react': path.resolve(__dirname, './node_modules/react'),
-      'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
-      'styled': path.resolve(__dirname, './node_modules/@emotion/styled'),
-    }
+    ]
   },
   externals: {
-    // Don't bundle react or react-dom      
-    react: {
-      commonjs: "react",
-      commonjs2: "react",
-      amd: "React",
-      root: "React"
-    },
-    "react-dom": {
-      commonjs: "react-dom",
-      commonjs2: "react-dom",
-      amd: "ReactDOM",
-      root: "ReactDOM"
-    }
+    // La linea de aqui abajo es solo para indicar que vamos a utilizar la dependencia "React" de parent-testing-project.
+    'react': 'commonjs react',
+    'react': 'React'
   }
 };
