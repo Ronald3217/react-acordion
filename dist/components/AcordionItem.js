@@ -7,17 +7,19 @@ exports.default = void 0;
 
 require("core-js/modules/web.dom-collections.iterator.js");
 
-var _react = require("react");
+var _react = _interopRequireWildcard(require("react"));
 
 var _styled = _interopRequireDefault(require("@emotion/styled"));
-
-var _react2 = require("@emotion/react");
 
 var _getTheme = _interopRequireDefault(require("./helper/getTheme"));
 
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -49,25 +51,31 @@ const AcordionItem = _ref => {
   };
 
   const selectedtheme = (0, _getTheme.default)(theme);
-  return /*#__PURE__*/React.createElement(_react2.ThemeProvider, {
-    theme: selectedtheme
-  }, /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: "accordion-item, ".concat(opened ? "accordion-item-opened" : null),
     onClick: handleViewQuestion
-  }, /*#__PURE__*/React.createElement(HeaderContainer, null, /*#__PURE__*/React.createElement(Title, null, title), /*#__PURE__*/React.createElement(Open, {
+  }, /*#__PURE__*/_react.default.createElement(HeaderContainer, {
+    theme: selectedtheme
+  }, /*#__PURE__*/_react.default.createElement(Title, {
+    theme: selectedtheme
+  }, title), /*#__PURE__*/_react.default.createElement(Open, {
+    theme: selectedtheme,
     id: "thin-x",
     viewBox: "0 0 26 26",
-    className: "svg-icon svg-icon-thin-x svg-closed ".concat(opened ? "rotate-svg" : null, " } "),
-    focusable: "true"
-  }, /*#__PURE__*/React.createElement("path", {
+    focusable: "true",
+    className: "svg-icon svg-icon-thin-x svg-closed ".concat(opened ? "rotate-svg" : null, " } ")
+  }, /*#__PURE__*/_react.default.createElement("path", {
     d: "M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"
-  }))), /*#__PURE__*/React.createElement(BodyContainer, {
+  }))), /*#__PURE__*/_react.default.createElement(BodyContainer, {
+    theme: selectedtheme,
     className: "accordion-item__inner"
-  }, /*#__PURE__*/React.createElement(Content, {
+  }, /*#__PURE__*/_react.default.createElement(Content, {
+    theme: selectedtheme,
     className: "accordion-item__content"
-  }, /*#__PURE__*/React.createElement(Paragraph, {
+  }, /*#__PURE__*/_react.default.createElement(Paragraph, {
+    theme: selectedtheme,
     className: "accordion-item__paragraph"
-  }, paragraph)))));
+  }, paragraph))));
 };
 
 var _default = AcordionItem;

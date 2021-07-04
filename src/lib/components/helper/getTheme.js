@@ -1,50 +1,41 @@
 const getTheme = (theme)=> {
-		let selectedTheme;
-		switch (theme) {
-			case 'dark':
-				selectedTheme = {
-					backgroundHeader: `rgba(0, 0, 0, 0.8)`,
-					background: `rgba(0, 0, 0, 0.6)`,
-					backgroundUl: 'transparent',
-					color: `#fff`,
-					borderBottom: `.5px solid #fff`,
-				};
-				break;
-			case 'blue':
-				selectedTheme = {
-					background: `#0e57b7`,
-					backgroundHeader: '#0e57b7',
-					backgroundUl: `transparent`,
-					color: `#fff`,
-					borderBottom: `.5px solid #fff`,
-				};
-				break;
-			case 'green' :
-				selectedTheme = {
-					background: '#096',
-					backgroundHeader: '#004d33',
-					backgroundUl: `transparent`,
-					color: `#fff`,
-					borderBottom: `.5px solid #fff`,
-				}
-			case 'purple':
-				selectedTheme = {
-					background: `rgb(158, 134, 255)`,
-					backgroundHeader: 'rgb(150, 134, 255)',
-					backgroundUl: `transparent`,
-					color: `#fff`,
-					borderBottom: `.5px solid #fff`,
-				};
-				break;
-			default:
-				selectedTheme= {
-					background: '#fff',
-					backgroundHeader: '#fff',
-					backgroundUl: 'transparent',
-					color: '#000',
-					borderBottom: '.5px solid rgba(0, 0, 0, 0.1) ',
-				};
-		}
-		return selectedTheme
+	switch (theme) {
+		case 'dark':
+			return {
+				backgroundHeader: `rgba(0, 0, 0, 0.9)`,
+				background: `rgba(0, 0, 0, 0.8)`,
+				color: `#fff`,
+				borderBottom: `.5px solid #fff`,
+			};
+		case 'blue':
+			return {
+				background: `#0e57b7`,
+				backgroundHeader: '#0e57b7',
+				color: `#fff`,
+				borderBottom: `.5px solid #ccc`,
+			};
+			
+		case 'green' :
+			return {
+				background: '#096',
+				backgroundHeader: '#004d33',
+				color: `#fff`,
+				borderBottom: `.5px solid #ccc`,
+			}
+		case 'purple':
+			return {
+				background: `rgb(158, 134, 255)`,
+				backgroundHeader: 'rgb(150, 134, 255)',
+				color: `#fff`,
+				borderBottom: `.5px solid #fff`,
+			};
+		default:
+			return {
+				background: '#fff',
+				backgroundHeader: '#fff',
+				color: '#000',
+				borderBottom: '.5px solid rgba(0, 0, 0, 0.1) ',
+			};
 	}
+}
 export default getTheme;

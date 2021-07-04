@@ -1,8 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 import styled from "@emotion/styled";
-import { ThemeProvider } from '@emotion/react';
-
+// Utilities
 import getTheme from './helper/getTheme';
 
 const HeaderContainer = styled.div`
@@ -76,36 +75,33 @@ const AcordionItem = ({ data, theme }) => {
   const handleViewQuestion = () => {
     setOpened(!opened);
   };
-  const selectedtheme = getTheme(theme)
+  const selectedtheme = getTheme(theme);
 
   return (
-      <ThemeProvider theme={selectedtheme}>
         <div
-        className={`accordion-item, ${opened  ? "accordion-item-opened" : null}`}
-        onClick={handleViewQuestion}
+          className={`accordion-item, ${opened  ? "accordion-item-opened" : null}`}
+          onClick={handleViewQuestion}
         >
-          <HeaderContainer>
-            <Title>{title}</Title>
+          <HeaderContainer theme={selectedtheme}>
+            <Title theme={selectedtheme}>{title}</Title>
             <Open
-              id="thin-x"
-              viewBox="0 0 26 26"
+              theme={selectedtheme}
+              id="thin-x" viewBox="0 0 26 26" focusable="true"
               className={`svg-icon svg-icon-thin-x svg-closed ${
                 opened ? "rotate-svg" : null
               } } `}
-              focusable="true"
               >
               <path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path>
             </Open>
           </HeaderContainer>
-          <BodyContainer className="accordion-item__inner">
-            <Content className="accordion-item__content">
-              <Paragraph className="accordion-item__paragraph">
+          <BodyContainer theme={selectedtheme} className="accordion-item__inner">
+            <Content theme={selectedtheme} className="accordion-item__content">
+              <Paragraph theme={selectedtheme} className="accordion-item__paragraph">
                 {paragraph}
               </Paragraph>
             </Content>
           </BodyContainer>
         </div>
-      </ThemeProvider>
   );
 };
 

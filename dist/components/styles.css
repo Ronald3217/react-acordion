@@ -1,6 +1,3 @@
-.accordion-item-opened .accordion-item__icon {
-  transform: rotate(180deg);
-}
 .accordion-item-opened .accordion-item__inner {
   max-height: 100rem;
   transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
