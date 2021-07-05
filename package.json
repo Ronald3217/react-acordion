@@ -1,6 +1,6 @@
 {
     "name": "react-faq-acordion",
-    "version": "0.1.02541",
+    "version": "0.1.02544",
     "description": "Frequently Asked Questions Component for React",
     "main": "dist/index.js",
     "module": "dist/index.js",
@@ -36,15 +36,15 @@
     "devDependencies": {
         "@babel/cli": "^7.14.5",
         "@babel/core": "^7.14.6",
-        "@babel/preset-env": "^7.14.7"
+        "@babel/preset-env": "^7.14.7",
+        "@babel/preset-react": "^7.14.5"
     },
     "dependencies": {
         "@babel/polyfill": "^7.12.1",
-        "@babel/preset-react": "^7.14.5",
         "@babel/runtime": "^7.14.6",
+        "core-js": "^3.15.2",
         "@emotion/react": "^11.4.0",
         "@emotion/styled": "^11.3.0",
-        "core-js": "^3.15.2",
         "react": "^17.0.2"
     }
 }
