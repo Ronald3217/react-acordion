@@ -11,6 +11,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styled = _interopRequireDefault(require("@emotion/styled"));
 
+var _getTheme = _interopRequireDefault(require("./helper/getTheme"));
+
 var _AcordionItem = _interopRequireDefault(require("./AcordionItem"));
 
 var _templateObject, _templateObject2;
@@ -26,14 +28,16 @@ const Li = _styled.default.li(_templateObject2 || (_templateObject2 = _taggedTem
 const Accordion = _ref => {
   let {
     data,
-    theme
+    theme,
+    customTheme
   } = _ref;
+  const selectedtheme = (0, _getTheme.default)(theme, customTheme);
   return /*#__PURE__*/_react.default.createElement(Ul, null, data.map((data, key) => {
     return /*#__PURE__*/_react.default.createElement(Li, {
       key: data.title
     }, /*#__PURE__*/_react.default.createElement(_AcordionItem.default, {
       data: data,
-      theme: theme
+      theme: selectedtheme
     }));
   }));
 };

@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-const getTheme = theme => {
+const getTheme = (theme, customTheme) => {
   switch (theme) {
     case 'dark':
       return {
@@ -45,6 +45,14 @@ const getTheme = theme => {
         backgroundHeader: 'rgb(150, 134, 255)',
         color: "#fff",
         borderBottom: ".5px solid #fff"
+      };
+
+    case 'custom':
+      return {
+        background: customTheme.background,
+        backgroundHeader: customTheme.backgroundHeader,
+        color: customTheme.color,
+        borderBottom: customTheme.borderBottom
       };
 
     default:

@@ -2,6 +2,8 @@ import "./styles.css";
 import React from 'react';
 //Dependencies:
 import styled from "@emotion/styled";
+// utilities
+import getTheme from './helper/getTheme';
 // Child Component
 import AccordionItem from "./AcordionItem";
 
@@ -25,18 +27,20 @@ const Li = styled.li`
   }
 `;
 
-const Accordion = ({ data, theme }) => {
-	return (
-		<Ul>
-			{data.map((data, key) => {
-				return (
-					<Li key={data.title}>
-						<AccordionItem data={data} theme={theme} />
-					</Li>
-				);
-			})}
-		</Ul>
-	);
+const Accordion = ({ data, theme, customTheme }) => {
+
+  const selectedtheme = getTheme(theme, customTheme);
+  return (
+    <Ul>
+      {data.map((data, key) => {
+        return (
+          <Li key={data.title}>
+            <AccordionItem data={data} theme={selectedtheme} />
+          </Li>
+        );
+      })}
+    </Ul>
+  );
 };
 
 export default Accordion;

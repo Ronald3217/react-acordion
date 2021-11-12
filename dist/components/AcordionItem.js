@@ -11,8 +11,6 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styled = _interopRequireDefault(require("@emotion/styled"));
 
-var _getTheme = _interopRequireDefault(require("./helper/getTheme"));
-
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -50,16 +48,15 @@ const AccordionItem = _ref => {
     setOpened(!opened);
   };
 
-  const selectedtheme = (0, _getTheme.default)(theme);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "accordion-item, ".concat(opened ? "accordion-item-opened" : null),
     onClick: handleViewQuestion
   }, /*#__PURE__*/_react.default.createElement(HeaderContainer, {
-    theme: selectedtheme
+    theme: theme
   }, /*#__PURE__*/_react.default.createElement(Title, {
-    theme: selectedtheme
+    theme: theme
   }, title), /*#__PURE__*/_react.default.createElement(Open, {
-    theme: selectedtheme,
+    theme: theme,
     id: "thin-x",
     viewBox: "0 0 26 26",
     focusable: "true",
@@ -67,13 +64,13 @@ const AccordionItem = _ref => {
   }, /*#__PURE__*/_react.default.createElement("path", {
     d: "M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"
   }))), /*#__PURE__*/_react.default.createElement(BodyContainer, {
-    theme: selectedtheme,
+    theme: theme,
     className: "accordion-item__inner"
   }, /*#__PURE__*/_react.default.createElement(Content, {
-    theme: selectedtheme,
+    theme: theme,
     className: "accordion-item__content"
   }, /*#__PURE__*/_react.default.createElement(Paragraph, {
-    theme: selectedtheme,
+    theme: theme,
     className: "accordion-item__paragraph"
   }, paragraph))));
 };

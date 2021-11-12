@@ -1,6 +1,6 @@
 {
     "name": "react-faq-acordion",
-    "version": "0.1.02544",
+    "version": "0.1.31",
     "description": "Frequently Asked Questions Component for React",
     "main": "dist/index.js",
     "module": "dist/index.js",
@@ -24,8 +24,7 @@
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "prebuild": "rm -rf dist",
-        "build": "NODE_ENV=production babel src/lib --out-dir dist --copy-files"
+        "build": "babel src/lib --out-dir dist --copy-files"
     },
     "peerDependencies": {
         "@emotion/react": "^11.4.0",
